@@ -1,37 +1,37 @@
 package by.overone.it.Validation;
 
-import by.overone.it.Entity.User;
-import by.overone.it.Service.UserService;
+import by.overone.it.Entity.Person;
+import by.overone.it.Service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Validation {
     @Autowired
-    private UserService userService;
+    PersonService personService;
 
-    public String LoginValidation(String email, String password) {
+    public String registrationValidation(String email, String password, String firstName, String secondName,String repassword) {
+        Person person = new Person();
         String message = "";
-        User user = new User();
-        user = userService.getUserByEmail(email);
-        if (user == null)
-            message = "Not found this email";
-        else if (!user.getPassword().equals(password))
-            message = "Incorrect password";
-        return message;
-    }
-
-    public String RegistrationValidation(String email, String password, String firstName, String secondName,String repassword) {
-        String message = "";
-        if (userService.getUserByEmail(email) != null)
-            message = "Email already exist";
-        else if (!password.equals(repassword)){
-            message = "password mismatched";
-             if(firstName==null||secondName==null)
-                message="First and second name cannot be empty";
+        if (personService.getPersonByEmail(email) != null) {
+            message = " User is already EXIST";
         }
+
+      else if (!password.equals(repassword)) {
+            message = "Passwords are different";
+        }
+    else if (firstName == null || secondName == null) {
+            message = "Your names are empty";
+        }
+return message;
+    }
+    public String loginValidation(String email,String password){
+        String message = "";
+        Person person = personService.getPersonByEmail(email);
+        if(person == null)
+            message="Incorrect email";
+else if(!person.getPassword().equals(password))
+    message = "Incorrect password";
         return message;
     }
-
-
 }
