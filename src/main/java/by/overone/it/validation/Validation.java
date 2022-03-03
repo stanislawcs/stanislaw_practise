@@ -1,7 +1,7 @@
-package by.overone.it.Validation;
+package by.overone.it.validation;
 
-import by.overone.it.Entity.Person;
-import by.overone.it.Service.PersonService;
+import by.overone.it.entity.Person;
+import by.overone.it.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -10,7 +10,7 @@ public class Validation {
     @Autowired
     PersonService personService;
 
-    public String registrationValidation(String email, String password, String firstName, String secondName,String repassword) {
+    public String registrationValidation(String email, String password,String repassword, String firstName, String secondName) {
         Person person = new Person();
         String message = "";
         if (personService.getPersonByEmail(email) != null) {

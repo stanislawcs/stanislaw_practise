@@ -9,14 +9,14 @@ ${message}<br>
 <form method="post" action="/registration">
     <input type="text" name="email"
     placeholder="email"/><br>
-    <input type="text" name="password"
+    <input type="password" name="password"
            placeholder="password"/><br>
+    <input type="password" name="repassword"
+           placeholder="repassword"/><br>
     <input type="text" name="firstname"
-           placeholder="firstname"/><br>
+    placeholder="firstname"/><br>
     <input type="text" name="secondname"
-           placeholder="secondname"/><br>
-    <input type="text" name="repassword"
-    placeholder="repassword"/><br>
+    placeholder="secondname"/><br>
     <button>Registration</button>
     <a href="/login">login</a>
 </form>

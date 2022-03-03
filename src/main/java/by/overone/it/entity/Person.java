@@ -1,4 +1,4 @@
-package by.overone.it.Entity;
+package by.overone.it.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

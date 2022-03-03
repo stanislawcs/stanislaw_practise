@@ -1,6 +1,6 @@
-package by.overone.it.Repository;
+package by.overone.it.repository;
 
-import by.overone.it.Entity.Person;
+import by.overone.it.entity.Person;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

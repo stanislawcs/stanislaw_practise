@@ -8,7 +8,7 @@ ${message}<br>
 <form method ="post" action="/login">
     <input type="text" name="email"
     placeholder="email"/><br>
-    <input type="text" name="password"
+    <input type="password" name="password"
     placeholder="password"><br>
     <button>Login</button>
     <a href="/registration">registration</a>

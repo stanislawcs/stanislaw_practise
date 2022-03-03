@@ -1,7 +1,7 @@
-package by.overone.it.Controllers;
+package by.overone.it.controllers;
 
-import by.overone.it.Service.PersonService;
-import by.overone.it.Validation.Validation;
+import by.overone.it.service.PersonService;
+import by.overone.it.validation.Validation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -36,7 +36,7 @@ public class LoginController {
             return "login_page";
         }
         else{
-        return "Successful_log";
+        return "successful_log";
         }
     }
 }

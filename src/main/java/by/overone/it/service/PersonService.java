@@ -1,7 +1,7 @@
-package by.overone.it.Service;
+package by.overone.it.service;
 
-import by.overone.it.Entity.Person;
-import by.overone.it.Repository.PersonRepository;
+import by.overone.it.entity.Person;
+import by.overone.it.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
